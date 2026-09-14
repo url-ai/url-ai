@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Url-AI — ton assistant IA sur ton bureau Windows</title>
+    <meta
+      name="description"
+      content="Url-AI : application de bureau Windows pour discuter avec DeepSeek, Groq, ChatGPT, Claude ou Ollama. Streaming, historique, export Markdown. Tes clés restent sur ton PC."
+    />
+    <meta name="theme-color" content="#04020e" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Url-AI — ton assistant IA sur ton bureau Windows" />
+    <meta
+      property="og:description"
+      content="DeepSeek, Groq, ChatGPT, Claude et Ollama dans une seule application de bureau Windows. Téléchargement gratuit."
+    />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="favicon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Fond « galaxie » : mêmes effets que dans l'application -->
+    <div class="galaxy" aria-hidden="true">
+      <div class="nebula nebula-1"></div>
+      <div class="nebula nebula-2"></div>
+      <div class="nebula nebula-3"></div>
+      <div class="stars stars-far"></div>
+      <div class="stars stars-mid"></div>
+      <div class="stars stars-near"></div>
+      <div class="shooting"></div>
+      <div class="galaxy-vignette"></div>
+    </div>
+
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="#top">
+          <span class="brand-mark">AI</span>
+          <span class="brand-name">Url-AI</span>
+        </a>
+        <nav class="nav">
+          <a href="#apercu">Aperçu</a>
+          <a href="#fonctionnalites">Fonctionnalités</a>
+          <a href="#installation">Installation</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <a class="btn btn-primary btn-sm" href="#telecharger">Télécharger</a>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- ------------------------------------------------------------- héros -->
+      <section class="hero">
+        <div class="wrap hero-inner">
+          <p class="eyebrow">Windows 10 / 11 · 64 bits · Gratuit</p>
+          <h1>
+            Ton assistant IA,<br />
+            <span class="grad">enfin sur ton bureau.</span>
+          </h1>
+          <p class="lead">
+            Url-AI réunit <strong>DeepSeek</strong>, <strong>Groq</strong>,
+            <strong>ChatGPT</strong>, <strong>Claude</strong> et <strong>Ollama</strong> dans une
+            seule application de bureau. Une seule interface, tous tes modèles, et tes clés API
+            qui ne quittent jamais ton ordinateur.
+          </p>
+
+          <div class="cta-row">
+            <a
+              class="btn btn-primary btn-lg"
+              href="telechargements/Url-AI-Setup-1.1.0.exe"
+              download
+              data-download="installer"
+            >
+              ⬇ Télécharger pour Windows
+            </a>
+            <a class="btn btn-ghost btn-lg" href="#installation">Comment ça s'installe ?</a>
+          </div>
+
+          <p class="micro">
+            Fichier : <code data-filename="installer">Url-AI Setup 1.1.0.exe</code> · aucune
+            inscription · aucun compte Url-AI à créer.
+          </p>
+        </div>
+      </section>
+
+      <!-- ------------------------------------------------------------ aperçu -->
+      <section id="apercu" class="section">
+        <div class="wrap">
+          <h2 class="section-title reveal">À quoi ça ressemble</h2>
+          <p class="section-sub reveal">
+            Une interface sombre aux couleurs de galaxie, pensée pour lire du code et de longs
+            échanges sans se fatiguer les yeux.
+          </p>
+
+          <!-- Maquette de l'application, dessinée en CSS -->
+          <div class="mockup reveal" role="img" aria-label="Aperçu de l'interface de Url-AI">
+            <div class="mockup-bar">
+              <span class="dot dot-r"></span><span class="dot dot-y"></span
+              ><span class="dot dot-g"></span>
+              <span class="mockup-title">Url-AI</span>
+            </div>
+            <div class="mockup-body">
+              <aside class="mockup-side">
+                <div class="mockup-new">+ Nouvelle conversation</div>
+                <div class="mockup-search">Rechercher…</div>
+                <div class="mockup-conv active">Explique les fibres optiques</div>
+                <div class="mockup-conv">Script de sauvegarde</div>
+                <div class="mockup-conv">Résumé du rapport</div>
+                <div class="mockup-spacer"></div>
+                <div class="mockup-conv">Paramètres</div>
+              </aside>
+              <div class="mockup-main">
+                <div class="mockup-top">
+                  <span class="mockup-heading">Explique les fibres optiques</span>
+                  <span class="mockup-chip">Groq</span>
+                </div>
+                <div class="mockup-msgs">
+                  <div class="mockup-msg user">
+                    <span class="mockup-avatar">Moi</span>
+                    <p>Explique-moi simplement comment circule la lumière dans une fibre optique.</p>
+                  </div>
+                  <div class="mockup-msg">
+                    <span class="mockup-avatar ai">Url-AI</span>
+                    <div>
+                      <p>
+                        La lumière reste prisonnière du cœur grâce à la
+                        <strong>réflexion totale interne</strong> : elle rebondit le long du verre
+                        au lieu de s'échapper.
+                      </p>
+                      <div class="mockup-code">
+                        <span class="mockup-code-head">text</span>
+                        <code>cœur (n₁) → gaine (n₂ &lt; n₁) → réflexion → propagation</code>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mockup-input">Écris ton message…</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ----------------------------------------------------- fonctionnalités -->
+      <section id="fonctionnalites" class="section">
+        <div class="wrap">
+          <h2 class="section-title reveal">Ce qu'il sait faire</h2>
+          <p class="section-sub reveal">
+            Tout ce qu'on attend d'une appli de bureau : rapide, privée, et sans onglets de
+            navigateur ouverts.
+          </p>
+
+          <div class="cards">
+            <article class="card reveal">
+              <h3>5 fournisseurs au choix</h3>
+              <p>
+                DeepSeek, Groq (gratuit), ChatGPT, Claude… et Ollama pour tourner
+                <strong>hors ligne</strong>, sans clé et sans crédit.
+              </p>
+            </article>
+            <article class="card reveal">
+              <h3>Réponses en direct</h3>
+              <p>
+                Le texte s'écrit mot à mot pendant que le modèle réfléchit. Un bouton
+                <strong>Arrêter</strong> (ou <kbd>Échap</kbd>) pour couper court.
+              </p>
+            </article>
+            <article class="card reveal">
+              <h3>Historique rangé</h3>
+              <p>
+                Conversations enregistrées automatiquement, renommées d'après ta question,
+                recherchables et supprimables en un clic.
+              </p>
+            </article>
+            <article class="card reveal">
+              <h3>Code mis en forme</h3>
+              <p>
+                Markdown complet : titres, listes, citations, blocs de code avec bouton
+                <strong>Copier</strong> et liens cliquables.
+              </p>
+            </article>
+            <article class="card reveal">
+              <h3>Vraiment privé</h3>
+              <p>
+                Tes clés API sont gardées par l'application et jamais affichées en clair. Rien ne
+                passe par un serveur Url-AI : il n'y en a pas.
+              </p>
+            </article>
+            <article class="card reveal">
+              <h3>Export en Markdown</h3>
+              <p>
+                Une conversation à garder ? Exporte-la en <code>.md</code> pour la retrouver dans
+                Obsidian, Notion ou un dépôt Git.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ------------------------------------------------------ téléchargement -->
+      <section id="telecharger" class="section">
+        <div class="wrap">
+          <h2 class="section-title reveal">Télécharger Url-AI</h2>
+          <p class="section-sub reveal">
+            Choisis la version : installation classique avec raccourci sur le bureau, ou un seul
+            fichier à emporter partout.
+          </p>
+
+          <div class="downloads">
+            <article class="dl-card primary reveal">
+              <span class="dl-badge">Recommandé</span>
+              <h3>Version installation</h3>
+              <p class="dl-file"><code data-filename="installer">Url-AI Setup 1.1.0.exe</code></p>
+              <p>
+                Assistant d'installation classique : raccourci sur le Bureau et dans le menu
+                Démarrer, désinstallation propre via Windows.
+              </p>
+              <a
+                class="btn btn-primary btn-lg btn-block"
+                href="telechargements/Url-AI-Setup-1.1.0.exe"
+                download
+                data-download="installer"
+              >
+                ⬇ Télécharger l'installateur
+              </a>
+            </article>
+
+            <article class="dl-card reveal">
+              <span class="dl-badge soft">Sans installation</span>
+              <h3>Version portable</h3>
+              <p class="dl-file"><code data-filename="portable">Url-AI 1.1.0.exe</code></p>
+              <p>
+                Un unique fichier à double-cliquer, à poser où tu veux (bureau, clé USB). L'historique
+                reste partagé avec la version installée.
+              </p>
+              <a
+                class="btn btn-ghost btn-lg btn-block"
+                href="telechargements/Url-AI-1.1.0.exe"
+                download
+                data-download="portable"
+              >
+                ⬇ Télécharger le portable
+              </a>
+            </article>
+          </div>
+
+          <p class="micro center">
+            Compatible Windows 10 et 11 (64 bits). Url-AI est une application Electron : Windows
+            demandera peut-être une confirmation de sécurité (SmartScreen) — voir la FAQ.<br />
+            Le fichier téléchargé doit peser <strong>environ 80 Mo</strong> : s'il ne fait que
+            quelques kilo-octets, ce n'est pas l'application (voir la FAQ).
+          </p>
+        </div>
+      </section>
+
+      <!-- -------------------------------------------------------- installation -->
+      <section id="installation" class="section">
+        <div class="wrap">
+          <h2 class="section-title reveal">Installation en 3 étapes</h2>
+          <p class="section-sub reveal">Cinq minutes montre en main, clé API comprise.</p>
+
+          <ol class="steps">
+            <li class="reveal">
+              <span class="step-num">1</span>
+              <h3>Télécharge et lance l'installateur</h3>
+              <p>
+                Ouvre le fichier <code data-filename="installer">Url-AI Setup 1.1.0.exe</code>. Si
+                Windows affiche « Windows a protégé votre PC », clique sur
+                <strong>Informations complémentaires</strong> puis
+                <strong>Exécuter quand même</strong>.
+              </p>
+            </li>
+            <li class="reveal">
+              <span class="step-num">2</span>
+              <h3>Installe, puis ouvre Url-AI</h3>
+              <p>
+                Suis l'assistant (<strong>Suivant</strong>, puis <strong>Installer</strong>) : à la
+                fin, le raccourci <strong>Url-AI</strong> apparaît sur ton bureau. C'est
+                <em>lui</em> qu'il faut double-cliquer pour ouvrir l'application.
+              </p>
+              <p class="micro">
+                ⚠️ Le fichier <code data-filename="installer">Url-AI Setup 1.1.0.exe</code> que tu
+                as téléchargé n'est <strong>pas</strong> l'application : c'est l'installateur. Le
+                double-cliquer relance l'installation, ça n'ouvre pas Url-AI. L'application est le
+                raccourci <strong>Url-AI</strong> du bureau, ou le fichier
+                <code>%LOCALAPPDATA%\Programs\Url-AI\Url-AI.exe</code>.
+              </p>
+            </li>
+            <li class="reveal">
+              <span class="step-num">3</span>
+              <h3>Colle une clé API</h3>
+              <p>
+                Clique sur <strong>Paramètres</strong> (en bas à gauche), choisis ton fournisseur,
+                colle ta clé et enregistre. Pour rester gratuit : <strong>Groq</strong>. Pour du
+                hors ligne : <strong>Ollama</strong>.
+              </p>
+            </li>
+          </ol>
+
+          <div class="keys reveal">
+            <p class="keys-title">Où trouver ta clé API ?</p>
+            <ul>
+              <li>
+                <strong>Groq (gratuit)</strong> :
+                <a href="https://console.groq.com/keys" target="_blank" rel="noreferrer"
+                  >console.groq.com/keys</a
+                >
+              </li>
+              <li>
+                <strong>DeepSeek</strong> :
+                <a href="https://platform.deepseek.com/api_keys" target="_blank" rel="noreferrer"
+                  >platform.deepseek.com/api_keys</a
+                >
+                <span class="tag">crédits offerts à l'inscription</span>
+              </li>
+              <li>
+                <strong>ChatGPT</strong> :
+                <a href="https://platform.openai.com/api-keys" target="_blank" rel="noreferrer"
+                  >platform.openai.com/api-keys</a
+                >
+                <span class="tag warn">payant à l'usage</span>
+              </li>
+              <li>
+                <strong>Claude</strong> :
+                <a href="https://console.anthropic.com" target="_blank" rel="noreferrer"
+                  >console.anthropic.com</a
+                >
+                <span class="tag warn">payant à l'usage</span>
+              </li>
+              <li>
+                <strong>Ollama</strong> :
+                <a href="https://ollama.com/download" target="_blank" rel="noreferrer"
+                  >ollama.com/download</a
+                >
+                <span class="tag ok">local, gratuit, hors ligne</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------------------------------------------------------------- faq -->
+      <section id="faq" class="section">
+        <div class="wrap">
+          <h2 class="section-title reveal">Questions fréquentes</h2>
+
+          <div class="faq">
+            <details class="reveal">
+              <summary>Url-AI est-il vraiment gratuit ?</summary>
+              <p>
+                L'application l'est, totalement. Les modèles, eux, dépendent du fournisseur : Groq et
+                Ollama sont gratuits, DeepSeek offre des crédits à l'inscription, ChatGPT et Claude
+                sont facturés à l'usage par leurs éditeurs.
+              </p>
+            </details>
+            <details class="reveal">
+              <summary>
+                Windows affiche « Windows a protégé votre PC » à l'installation, c'est grave ?
+              </summary>
+              <p>
+                Non. C'est l'avertissement habituel de Windows pour une application sans certificat
+                de signature payant. Clique sur <strong>Informations complémentaires</strong> puis
+                <strong>Exécuter quand même</strong>. Le code est entièrement local et lisible.
+              </p>
+            </details>
+            <details class="reveal">
+              <summary>
+                Au lancement, Windows dit « ffmpeg.dll est introuvable », comment réparer ?
+              </summary>
+              <p>
+                Ce message signifie que le programme a été lancé <strong>sans les fichiers qui
+                l'accompagnent</strong>. <code>ffmpeg.dll</code> doit toujours se trouver à côté de
+                <code>Url-AI.exe</code>. Deux cas possibles :<br />
+                1. <strong>Tu as lancé l'application seule</strong> (un <code>Url-AI.exe</code>
+                isolé, sans le dossier complet) : retélécharge-la avec le bouton
+                <strong>Télécharger pour Windows</strong> ci-dessus et lance le fichier
+                <code>Url-AI-Setup-…exe</code>. Un <code>Url-AI.exe</code> seul ne peut pas
+                démarrer.<br />
+                2. <strong>Ton antivirus a mis <code>ffmpeg.dll</code> en quarantaine</strong> :
+                c'est un faux positif connu. <em>Sécurité Windows</em> →
+                <em>Protection contre les virus et menaces</em> →
+                <strong>Historique de protection</strong> → cherche <code>ffmpeg.dll</code> →
+                <strong>Actions → Autoriser sur l'appareil</strong>, puis réinstalle.
+              </p>
+            </details>
+            <details class="reveal">
+              <summary>
+                J'installe, je double-clique, et rien ne s'ouvre — ni fenêtre ni message
+              </summary>
+              <p>
+                D'abord, vérifie sur quoi tu cliques : l'<strong>installateur</strong>
+                (<code>Url-AI-Setup-…exe</code>) installe l'application, il ne la lance pas. C'est
+                le raccourci <strong>Url-AI</strong> du bureau qu'il faut double-cliquer (ou
+                <code>%LOCALAPPDATA%\Programs\Url-AI\Url-AI.exe</code>).<br />
+                Ensuite, neuf fois sur dix, <strong>l'application tourne déjà en arrière-plan</strong>, même
+                sans fenêtre visible : une seule instance à la fois est autorisée (la clé et
+                l'historique vivent dans un seul fichier), et le second double-clic ne fait alors
+                rien du tout. Ouvre le <strong>Gestionnaire des tâches</strong> (<kbd>Ctrl</kbd> +
+                <kbd>Maj</kbd> + <kbd>Échap</kbd>), onglet <em>Processus</em> : si une ligne
+                <strong>Url-AI</strong> apparaît, termine-la, puis relance depuis le raccourci du
+                bureau.<br />
+                Sinon, vérifie que le raccourci pointe bien sur
+                <code>%LOCALAPPDATA%\Programs\Url-AI\Url-AI.exe</code> : s'il a été déplacé ou
+                supprimé, réinstalle l'application. Le journal d'Url-AI, dans
+                <code>%APPDATA%\Url-AI\demarrage.log</code>, dit toujours jusqu'où le lancement
+                est allé et ce qui l'a arrêté.
+              </p>
+            </details>
+
+            <details class="reveal">
+              <summary>Le fichier téléchargé ne pèse que quelques kilo-octets, c'est normal ?</summary>
+              <p>
+                Non, et ce n'est pas l'application. Un vrai installateur pèse environ
+                <strong>80 Mo</strong>. En dessous, c'est presque toujours la <strong>page d'erreur
+                du serveur</strong> enregistrée sous le nom de l'installateur : le fichier porte la
+                bonne extension, mais il ne contient pas de programme. Windows ne le lance pas et
+                n'affiche aucun message.<br />
+                Dans ce cas, préviens l'auteur du site : le fichier n'a pas été mis en ligne (un
+                dépôt Git ne transporte pas les gros `.exe`). En attendant, la version
+                <strong>portable</strong> ci-dessus fonctionne avec un seul fichier, sans
+                installation.
+              </p>
+            </details>
+
+            <details class="reveal">
+              <summary>Mes conversations et mes clés sont-elles envoyées quelque part ?</summary>
+              <p>
+                Non. Elles sont enregistrées uniquement sur ton ordinateur, dans
+                <code>%APPDATA%\Url-AI\</code>. Le seul trafic sortant, ce sont tes messages envoyés
+                au fournisseur que tu as choisi.
+              </p>
+            </details>
+            <details class="reveal">
+              <summary>Il faut un PC puissant ?</summary>
+              <p>
+                Non, sauf pour Ollama : compter 8 Go de RAM pour un petit modèle local et 16 Go pour
+                un modèle confortable. Les fournisseurs en ligne (DeepSeek, Groq, ChatGPT, Claude)
+                ne consomment quasiment rien.
+              </p>
+            </details>
+            <details class="reveal">
+              <summary>La version portable garde-t-elle mon historique ?</summary>
+              <p>
+                Oui : les deux versions partagent le même dossier de données, tu peux passer de l'une
+                à l'autre sans rien perdre.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- --------------------------------------------------------------- final -->
+      <section class="final">
+        <div class="wrap final-inner reveal">
+          <div class="orb" aria-hidden="true"></div>
+          <h2>Prêt à discuter ?</h2>
+          <p>Installe Url-AI, colle une clé, et pose ta première question.</p>
+          <a
+            class="btn btn-primary btn-lg"
+            href="telechargements/Url-AI-Setup-1.1.0.exe"
+            download
+            data-download="installer"
+          >
+            ⬇ Télécharger pour Windows
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <span><strong>Url-AI</strong> · version <span data-version>1.1.0</span></span>
+        <span class="footer-sep">·</span>
+        <span>Application de bureau locale pour Windows</span>
+        <span class="spacer"></span>
+        <a href="#telecharger">Téléchargement</a>
+        <a href="#faq">FAQ</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
