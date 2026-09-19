@@ -5,7 +5,7 @@
 //
 //  Le plus simple : GitHub. Crée une Release de ton dépôt en y déposant les
 //  deux .exe, puis écris ici le nom du dépôt — les deux liens se construisent
-//  tout seuls (le tag doit être v<version>, par exemple v1.2.0) :
+//  tout seuls (le tag doit être v<version>, par exemple v1.3.0) :
 //
 //      const GITHUB_REPO = 'url-ai/url-ai';
 //
@@ -20,7 +20,7 @@ const INSTALLER_URL = '';
 const PORTABLE_URL = '';
 
 // Doit correspondre à la version de package.json.
-const VERSION = '1.2.0';
+const VERSION = '1.3.0';
 
 // Nom des fichiers produits par « npm run dist » (voir build.artifactName dans package.json).
 // Des tirets, jamais d'espace : un nom avec espaces doit être encodé en %20 dans une URL,
@@ -63,7 +63,7 @@ for (const label of document.querySelectorAll('[data-version]')) {
 //
 //  Un lien mort ne produit aucune erreur visible : le navigateur enregistre la
 //  page « introuvable » du serveur sous le nom du fichier demandé, et la
-//  personne repart avec un « Url-AI-Setup-1.2.0.exe » de quelques kilo-octets.
+//  personne repart avec un « Url-AI-Setup-1.3.0.exe » de quelques kilo-octets.
 //  Windows refuse de le lancer sans le moindre message : on croit que
 //  l'application est cassée, alors que c'est le fichier qui n'a jamais été mis
 //  en ligne. Autant le dire sur la page.
